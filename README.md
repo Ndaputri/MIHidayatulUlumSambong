@@ -112,34 +112,7 @@
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-            
-            <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-green-600">
-                <div class="flex flex-col space-y-2">
-                    <a href="#home" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-home w-5 text-green-200"></i> Home
-                    </a>
-                    <a href="#syarat" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-check-circle w-5 text-green-200"></i> Syarat
-                    </a>
-                    <a href="#alur" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-road w-5 text-green-200"></i> Cara Daftar
-                    </a>
-                    <a href="#statistik" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-chart-bar w-5 text-green-200"></i> Statistik
-                    </a>
-                    <a href="#info" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-info-circle w-5 text-green-200"></i> Info
-                    </a>
-                    <div class="pt-2">
-                        <a href="<?= base_url();?>home/formulir" class="bg-orange-500 hover:bg-orange-600 text-center py-3 rounded-lg flex items-center justify-center gap-2 transition w-full">
-                            <i class="fas fa-file-alt"></i> Formulir Pendaftaran
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+  
 
     <!-- Spacer untuk fixed navbar -->
     <div class="h-16"></div>
