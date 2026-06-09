@@ -66,46 +66,46 @@
         .stat-card:hover {
             transform: translateY(-8px);
         }
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 <body class="bg-gradient-to-b from-green-50 to-gray-100">
 
-    <!-- ==================== NAVBAR YANG DIPERBAIKI (RATA KIRI, MENU DI KANAN) ==================== -->
+    <!-- ==================== NAVBAR RATA TENGAH ==================== -->
     <nav class="bg-green-700 text-white fixed w-full top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <!-- Logo dan Brand - Rata KIRI -->
-                <a href="#home" class="flex items-center space-x-3 hover:opacity-90 transition flex-shrink-0">
-                    <img class="w-10 h-10 rounded-full bg-white p-1 object-contain" 
+                <!-- Logo / Brand - Kiri -->
+                <div class="flex items-center space-x-2">
+                    <img class="w-8 h-8 rounded-full bg-white p-1 object-contain" 
                          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                         alt="Logo MI Hidayatul Ulum">
-                    <div>
-                        <h1 class="font-bold text-lg leading-tight">PPDB Online</h1>
-                        <p class="text-xs text-green-200">MI Hidayatul Ulum</p>
-                    </div>
-                </a>
+                         alt="Logo">
+                    <h1 class="text-lg md:text-xl font-bold">PPDB Online</h1>
+                </div>
                 
-                <!-- Desktop Menu - Rata KANAN -->
-                <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
-                    <a href="#home" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap">Home</a>
-                    <a href="#syarat" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap">Syarat</a>
-                    <a href="#alur" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap">Alur</a>
-                    <a href="#cara-daftar" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap">Cara Daftar</a>
-                    <a href="#statistik" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap">Statistik</a>
+                <!-- Desktop Menu - RATA TENGAH (menggunakan margin auto) -->
+                <div class="hidden md:flex items-center space-x-1 lg:space-x-2 mx-auto">
+                    <a href="#home" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="#syarat" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
+                        <i class="fas fa-check-circle"></i> Syarat
+                    </a>
+                    <a href="#alur" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
+                        <i class="fas fa-road"></i> Cara Daftar
+                    </a>
+                    <a href="#statistik" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
+                        <i class="fas fa-chart-bar"></i> Statistik
+                    </a>
+                    <a href="#info" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
+                        <i class="fas fa-info-circle"></i> Info
+                    </a>
                     <a href="<?= base_url();?>home/formulir" class="bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full flex items-center gap-2 transition ml-2 shadow-md whitespace-nowrap">
                         <i class="fas fa-file-alt"></i> Formulir
                     </a>
                 </div>
+                
+                <!-- Kosongkan di kanan agar menu tetap di tengah (untuk keseimbangan) -->
+                <div class="hidden md:block w-24"></div>
                 
                 <!-- Mobile Menu Button (Hamburger) -->
                 <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none p-2 hover:bg-green-600 rounded-lg transition">
@@ -123,13 +123,13 @@
                         <i class="fas fa-check-circle w-5 text-green-200"></i> Syarat
                     </a>
                     <a href="#alur" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-road w-5 text-green-200"></i> Alur
-                    </a>
-                    <a href="#cara-daftar" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-edit w-5 text-green-200"></i> Cara Daftar
+                        <i class="fas fa-road w-5 text-green-200"></i> Cara Daftar
                     </a>
                     <a href="#statistik" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
                         <i class="fas fa-chart-bar w-5 text-green-200"></i> Statistik
+                    </a>
+                    <a href="#info" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
+                        <i class="fas fa-info-circle w-5 text-green-200"></i> Info
                     </a>
                     <div class="pt-2">
                         <a href="<?= base_url();?>home/formulir" class="bg-orange-500 hover:bg-orange-600 text-center py-3 rounded-lg flex items-center justify-center gap-2 transition w-full">
@@ -333,31 +333,36 @@
         </div>
     </section>
 
-    <!-- ==================== FOOTER (SERAGAM DENGAN NAVBAR) ==================== -->
-    <footer class="bg-green-700 text-white py-6 md:py-8 mt-4">
+    <!-- ==================== INFO SECTION ==================== -->
+    <section id="info" class="container mx-auto py-12 md:py-16 px-4 pb-20">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="bg-gray-700 text-white px-6 py-4">
+                <h2 class="text-xl font-semibold flex items-center gap-2"><i class="fas fa-bullhorn"></i> Pengumuman</h2>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-600 mb-3">Informasi terbaru mengenai PPDB Online MI Hidayatul Ulum</p>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                    <p class="text-sm text-gray-700">📢 Pendaftaran dibuka mulai bulan Januari 2026. Segera daftarkan putra-putri Anda!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-green-700 text-white py-6 md:py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col items-center text-center">
-                <!-- Logo dan Nama - Sama dengan Navbar -->
-                <div class="flex items-center space-x-3 mb-4">
-                    <img class="w-10 h-10 rounded-full bg-white p-1 object-contain" 
+                <div class="flex items-center space-x-2 mb-4">
+                    <img class="w-8 h-8 rounded-full bg-white p-1 object-contain" 
                          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                         alt="Logo MI Hidayatul Ulum">
-                    <div>
-                        <h1 class="font-bold text-lg leading-tight">PPDB Online</h1>
-                        <p class="text-xs text-green-200">MI Hidayatul Ulum</p>
-                    </div>
+                         alt="Logo">
+                    <h1 class="font-bold text-lg">PPDB Online - MI Hidayatul Ulum</h1>
                 </div>
-                
-                <!-- Alamat -->
-                <p class="text-gray-200 text-sm mb-2">
-                    <i class="fas fa-map-marker-alt mr-2 text-green-300"></i>
+                <p class="text-green-200 text-sm mb-2">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
                     Jl. Blongko, Kec. Ngetos, Kab. Nganjuk, Jawa Timur
                 </p>
-                
-                <!-- Copyright -->
-                <p class="text-green-300 text-xs mt-3">
-                    © 2026 MI Hidayatul Ulum. All Rights Reserved.
-                </p>
+                <p class="text-green-300 text-xs">© 2026 MI Hidayatul Ulum. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
