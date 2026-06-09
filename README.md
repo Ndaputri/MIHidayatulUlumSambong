@@ -1,312 +1,230 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome 6 (free icons) for optional enhancements -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>SIG - Sistem Informasi Geografis</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI HIDAYATUL ULLUM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* custom smooth shadow & navbar brand refinement */
-        .navbar {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            padding: 0.75rem 1rem;
+        a {
+            color: inherit !important;
         }
-        .navbar-brand {
-            font-weight: 600;
-            letter-spacing: -0.3px;
-            font-size: 1.5rem;
+        .shadow-3d {
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease-in-out;
         }
-        .nav-link {
-            font-weight: 500;
-            margin: 0 0.2rem;
-            transition: color 0.2s ease;
-        }
-        .nav-link:hover {
-            color: #0a58ca !important;
-        }
-        .btn-outline-success {
-            border-radius: 40px;
-            padding: 0.375rem 1.2rem;
-        }
-        .search-input {
-            border-radius: 40px;
-            padding-left: 1rem;
-        }
-        /* make active link more visible */
-        .nav-link.active {
-            color: #0d6efd !important;
-            font-weight: 600;
-            border-bottom: 2px solid #0d6efd;
-        }
-        /* hero section placeholder to demonstrate complete page style */
-        .hero-section {
-            background: linear-gradient(135deg, #f8f9fc 0%, #e9ecef 100%);
-            border-radius: 1.5rem;
-            padding: 3rem 2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-        }
-        .card-feature {
-            transition: transform 0.2s;
-            border-radius: 1rem;
-            border: none;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.03);
-        }
-        .card-feature:hover {
+        .shadow-3d:hover {
             transform: translateY(-5px);
         }
-        footer {
-            margin-top: 3rem;
-            background: #f1f3f5;
-            border-radius: 1rem;
-            padding: 1.2rem;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #495057;
+        .btn {
+            background-color: #ffffff; /* Latar belakang putih */
+            color: #4A8C2A; /* Warna teks hijau */
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
-        @media (max-width: 991px) {
-            .navbar-collapse {
-                margin-top: 0.8rem;
-                padding-bottom: 0.5rem;
-            }
-            .d-flex {
-                margin-top: 0.8rem;
-                width: 100%;
-            }
-            .search-input {
-                flex: 1;
-            }
+        .btn:hover {
+            background-color: #e0e0e0; /* Latar belakang saat hover */
         }
     </style>
 </head>
-<body>
-
-    <!-- NAVBAR with proper Bootstrap 5 structure + brand -->
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
-        <div class="container">
-            <!-- brand / logo -->
-            <a class="navbar-brand text-primary" href="#">
-                <i class="fas fa-map-marked-alt me-2"></i>SIG<span class="text-dark"> Dashboard</span>
-            </a>
-            <!-- toggler button for mobile (fully functional) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Header -->
+    <div class="bg-white py-6 px-8 shadow-lg flex flex-col md:flex-row items-center justify-between">
+        <div class="flex items-center space-x-4">
+           <img border="0" data-original-height="714" data-original-width="720" height="50" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" width="50">
+            <h2 class="text-3xl font-bold text-green-700">MI HIDAYATUL ULLUM</h2>
+        </div>
+        <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-map-marker-alt text-yellow-500"></i>
+                <span>Jl. Blongko, Kec Ngetos Kab Nganjuk, Jawa Timur</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-clock text-yellow-500"></i>
+                <span>Full-Day School Senin-Sabtu</span>
+            </div>
             
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo site_url('home/index'); ?>">
-                            <i class="fas fa-home me-1"></i>Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo site_url('home/wilayah'); ?>">
-                            <i class="fas fa-draw-polygon me-1"></i>Wilayah
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo site_url('home/login'); ?>">
-                            <i class="fas fa-sign-in-alt me-1"></i>Login
-                        </a>
-                    </li>
-                </ul>
-                <!-- search form: improved style & accessibility -->
-                <form class="d-flex" role="search" onsubmit="event.preventDefault(); handleSearch();">
-                    <input class="form-control me-2 search-input" type="search" placeholder="Cari data geografis..." aria-label="Search" id="searchInput">
-                    <button class="btn btn-outline-success" type="submit">
-                        <i class="fas fa-search me-1"></i>Search
-                    </button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <!-- main container with content to make the page feel alive -->
-    <div class="container mt-4">
-        <!-- informative hero section as placeholder for home context -->
-        <div class="hero-section text-center">
-            <h1 class="display-5 fw-bold mb-3"><i class="fas fa-globe-asia text-primary"></i> Sistem Informasi Geografis</h1>
-            <p class="lead">Visualisasi data spasial, pemetaan wilayah, dan analisis geospasial terintegrasi.</p>
-            <hr class="my-4 w-25 mx-auto">
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#" class="btn btn-primary rounded-pill px-4" onclick="showDemoMessage('Peta interaktif segera hadir')"><i class="fas fa-map"></i> Lihat Peta</a>
-                <a href="#" class="btn btn-outline-secondary rounded-pill px-4" onclick="showDemoMessage('Statistik wilayah & demografi')"><i class="fas fa-chart-line"></i> Eksplorasi Data</a>
-            </div>
-        </div>
-
-        <!-- Feature cards: preview untuk wilayah, login, etc (menarik) -->
-        <div class="row g-4 mb-5">
-            <div class="col-md-4">
-                <div class="card card-feature h-100">
-                    <div class="card-body">
-                        <div class="mb-3 text-primary"><i class="fas fa-map-marked-alt fa-2x"></i></div>
-                        <h5 class="card-title">Kelola Wilayah</h5>
-                        <p class="card-text">Akses data administratif, batas daerah, dan layer spasial. Dashboard wilayah terintegrasi.</p>
-                        <a href="<?php echo site_url('home/wilayah'); ?>" class="btn btn-sm btn-light text-primary stretched-link">Jelajahi →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-feature h-100">
-                    <div class="card-body">
-                        <div class="mb-3 text-success"><i class="fas fa-lock fa-2x"></i></div>
-                        <h5 class="card-title">Akses Khusus</h5>
-                        <p class="card-text">Login untuk mengunggah peta, edit data geospasial, dan kolaborasi tim GIS.</p>
-                        <a href="<?php echo site_url('home/login'); ?>" class="btn btn-sm btn-light text-success stretched-link">Masuk Akun →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-feature h-100">
-                    <div class="card-body">
-                        <div class="mb-3 text-warning"><i class="fas fa-search-location fa-2x"></i></div>
-                        <h5 class="card-title">Pencarian Spasial</h5>
-                        <p class="card-text">Temukan lokasi, titik koordinat, dan data tematik melalui kotak pencarian diatas.</p>
-                        <button class="btn btn-sm btn-light text-warning" onclick="handleSearch()"><i class="fas fa-arrow-right"></i> Coba Sekarang</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- contoh area informasi dinamis / demo interaksi -->
-        <div class="alert alert-light border shadow-sm" id="infoPanel" role="alert">
-            <div class="d-flex align-items-center">
-                <i class="fas fa-info-circle fa-2x text-info me-3"></i>
-                <div>
-                    <strong>Sistem Informasi Geografis (SIG)</strong> — Demo navigasi dengan Bootstrap 5. Gunakan menu <strong>Home</strong>, <strong>Wilayah</strong>, atau <strong>Login</strong> untuk menguji tautan PHP dinamis (site_url). 
-                    Kotak pencarian memberikan feedback interaktif.
-                </div>
-            </div>
         </div>
     </div>
-
-    <!-- footer sederhana -->
-    <div class="container">
-        <footer>
-            <i class="far fa-copyright me-1"></i> 2026 SIG Platform — Pemetaan Digital Berkelanjutan 
-            <span class="mx-2">|</span> <a href="#" class="text-decoration-none text-secondary" onclick="showDemoMessage('Kebijakan privasi dalam pengembangan')">Kebijakan Privasi</a>
-        </footer>
-    </div>
-
-    <!-- Bootstrap JS Bundle (required for toggler and interactive components) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- custom interactive script (simulasi interaksi dan demo pesan) 
-         karena environment ini hanya frontend, kita akan menghormati link PHP dengan tetap 
-         menampilkan pesan console/alert bahwa link akan mengarah ke base_url jika framework berjalan.
-         namun tetap menjaga fungsi navigasi sebenarnya: jika site_url didefinisikan di server, 
-         akan berfungsi seperti biasa. di sisi frontend, kita beri alert demonstrasi ringan.
-         Juga fitur search yang memberikan notifikasi interaktif.
-    -->
+       <!-- Navigasi Utama -->
+    <section class="bg-green-700 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+            <div>
+
+                <i class="fas fa-home text-4xl mb-4"></i>
+                <h2 class="text-xl font-semibold">Profil</h2>
+                <p>Madrasah Ibtidaiyah HIDAYATUL ULLUM</p>
+                <a href="<?= base_url();?>home/profil" class="bg-green-900 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-900">LIHAT SELENGKAPNYA</a>
+            </div>
+            <div>
+                <i class="fas fa-book text-4xl mb-4"></i>
+                <h2 class="text-xl font-semibold">Program Madrasah</h2>
+                <p>Informasi Program Unggulan</p>
+                <a href="<?= base_url();?>home/program_madrasah" class="bg-green-900 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-900">LIHAT SELENGKAPNYA</a>
+            </div>
+            <div>
+                <i class="fas fa-trophy text-4xl mb-4"></i>
+                <h2 class="text-xl font-semibold">Prestasi</h2>
+                <p>Prestasi Peserta Didik</p>
+                <a href="<?= base_url();?>home/prestasi" class="bg-green-900 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-900">LIHAT SELENGKAPNYA</a>
+               
+            </div>
+            <div>
+                <i class="fas fa-info-circle text-4xl mb-4"></i>
+                <h2 class="text-xl font-semibold">Informasi</h2>
+                <p>Kegiatan Di sekolah</p>
+                <a href="<?= base_url();?>home/informasi" class="bg-green-900 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-900">LIHAT SELENGKAPNYA</a>
+               
+            </div>
+        </div>
+    </section>
+
+     <!-- Fasilitas Sekolah -->
+     <div class="container mx-auto py-12">
+        <h2 class="text-center text-3xl font-semibold text-green-700 mb-8">Fasilitas Sekolah</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="border p-6 text-center bg-white rounded-lg shadow-3d">
+                <i class="fas fa-chalkboard-teacher text-4xl text-green-700 mb-4"></i>
+                <h3 class="text-xl font-semibold">Ruang Kelas</h3>
+                <p>Tempat utama kegiatan belajar mengajar.</p>
+            </div>
+            <div class="border p-6 text-center bg-white rounded-lg shadow-3d">
+                <i class="fas fa-futbol text-4xl text-green-700 mb-4"></i>
+                <h3 class="text-xl font-semibold">Lapangan Olah Raga</h3>
+                <p>Fasilitas untuk mendukung minat dan bakat siswa.</p>
+            </div>
+            <div class="border p-6 text-center bg-white rounded-lg shadow-3d">
+                <i class="fas fa-desktop text-3xl text-green-700 mb-4"></i>
+                <h3 class="text-xl font-semibold">Lab Komputer</h3>
+                <p>Sarana untuk pembelajaran praktis siswa berkaitan dengan kompetensi di bidang IT dan komunikasi.</p>
+            </div>
+            <div class="border p-6 text-center bg-white rounded-lg shadow-3d">
+                <i class="fas fa-book text-3xl text-green-700 mb-4"></i>
+                <h3 class="text-xl font-semibold">Perpustakaan dan e-Library</h3>
+                <p>Pusat sumber ilmu pengetahuan dan informasi yang berbasis sekolah untuk mendukung proses pembelajaran.</p>
+            </div>
+            <div class="border p-6 text-center bg-white rounded-lg shadow-3d">
+                <i class="fas fa-utensils text-3xl text-green-700 mb-4"></i>
+                <h3 class="text-xl font-semibold">Kantin Sekolah</h3>
+                <p>Satu ruang yang berada di sekolah untuk menyediakan makanan dan minuman sehat untuk siswa.</p>
+            </div>
+            <div class="border p-6 text-center bg-white rounded-lg shadow-3d">
+                <i class="fas fa-mosque text-3xl text-green-700 mb-4"></i>
+                <h3 class="text-xl font-semibold">Musholla</h3>
+                <p>Tempat kegiatan Sholat berjamaah peserta didik.</p>
+            </div>
+            <div class="border p-6 text-center bg-white rounded-lg shadow-3d">
+                <i class="fas fa-wifi text-3xl text-green-700 mb-4"></i>
+                <h3 class="text-xl font-semibold">Internet dan Media</h3>
+                <p>Mendukung pembelajaran berbasis teknologi.</p>
+            </div>
+        </div>
+    </div>
+    <html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Web Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100">
+  <!-- FAQ Section -->
+  <section class="py-8">
+   <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div>
+      <h2 class="text-2xl font-bold text-green-700 mb-4">
+       FAQ
+      </h2>
+       
+        <div class="bg-white shadow-md rounded mb-4">
+            <div class="border-b">
+                <button class="w-full text-left px-4 py-3 text-green-700 font-semibold flex justify-between items-center toggle-button">
+                    
+                    Apa Konsep MI HIDAYATUL ULLUM?
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="hidden px-4 py-3 text-gray-700">
+                   Sekolah yang mengimplementasikan konsep pendidikan Islam berlandaskan AlQur’an dan As Sunnah. Konsep operasional merupakan akumulasi dari proses pembudayaan, pewarisan dan pengembangan ajaran agama Islam, budaya dan peradaban Islam dari generasi ke generasi.
+                </div>
+            </div>
+            <div class="border-b">
+                <button class="w-full text-left px-4 py-3 text-green-700 font-semibold flex justify-between items-center toggle-button">
+                    Bagaimana Implementasi MI HIDAYATUL ULLUM?
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="hidden px-4 py-3 text-gray-700">
+                   Pelajaran yang diberikan sangat lengkap. Berupa pendidikan dasar umum dan pendidikan agama. Pelajarnnya antara lain Pendidikan Kewarganegaraan, Bahasa Indonesia, Matematika, IPA, IPS, Seni Budaya,Seni Musik,Seni Rupa, dan Penjaskes. Sementara pelajaran lainnya yang berkaitan dengan keislaman masuk dalam kategori Muatan Lokal yang terdiri dari Akidah Akhlak, Qur’an Hadis, Fiqih, BMK,PEGON, Bahasa Arab, Bahasa Inggris, Tahfidz, dan komputer.
+                </div>
+            </div>
+            <div class="border-b">
+                <button class="w-full text-left px-4 py-3 text-green-700 font-semibold flex justify-between items-center toggle-button">
+                    Apakah Mengajarkan Pengetahuan Umum?
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="hidden px-4 py-3 text-gray-700">
+                    MI HIDAYATUL ULLUM tetap mengajarkan pelajaran umum seperti sekolah biasa.
+                </div>
+            </div>
+            <div class="border-b">
+                <button class="w-full text-left px-4 py-3 text-green-700 font-semibold flex justify-between items-center toggle-button">
+                    Apa Visi MI HIDAYATUL ULLUM ?
+                    <i class="fas fa-minus"></i>
+                </button>
+                <div class="px-4 py-3 text-gray-700">
+                   
+VISI MI HIDAYATUL ULLUM
+
+Terwujudnya Sumber Daya Manusia Yang Berilmu Beriman Berakhlakul kharimah Berdasarkan Iman Dan Bertaqwa
+MISI MI HIDAYATUL ULLUM
+
+    Menanamkan keyakinan atau akidah melalui pengalaman ajaran agama
+    Mengoptimalkan kegiatan pembelajaran siswa.
+    Menggali dan membimbing siswa agar kreatif dan inofatif
+    Menumbuhkan semangat berprestasi kepada siswa
+    Menjalin kerjasama yang harmonis antara warga sekitar dan lingkungan.
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // function to simulate smooth feedback for search and demo interactions
-        function handleSearch() {
-            const searchInput = document.getElementById('searchInput');
-            const query = searchInput ? searchInput.value.trim() : '';
-            if (query === '') {
-                showDemoMessage('Silakan masukkan kata kunci pencarian (contoh: kecamatan, sungai, batas wilayah)');
-            } else {
-                showDemoMessage(`Pencarian untuk: "${query}" — Fitur pencarian spasial akan segera tersedia di backend penuh.`);
-                // optional: log to console
-                console.log(`[SIG Search] query: ${query}`);
-                // you could also clear or keep
-            }
-        }
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
 
-        // reusable toast-like alert (non-intrusive but informative)
-        function showDemoMessage(message) {
-            // cari panel info atau buat temporary alert
-            let infoPanel = document.getElementById('infoPanel');
-            if (infoPanel) {
-                // change the inner content to show message temporarily but keep structure
-                const originalHTML = infoPanel.innerHTML;
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = originalHTML;
-                // store text for later?
-                infoPanel.innerHTML = `
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-lightbulb fa-2x text-warning me-3"></i>
-                        <div>
-                            <strong>Demo interaktif:</strong> ${message}
-                        </div>
-                        <button type="button" class="btn-close ms-auto" style="font-size:0.8rem;" onclick="restoreInfoPanel()" aria-label="Close"></button>
-                    </div>
-                `;
-                // add class transition
-                infoPanel.classList.add('alert-warning');
-                infoPanel.classList.remove('alert-light');
-                // simpan state untuk restore
-                window._originalPanelContent = originalHTML;
-                window._originalClass = 'alert-light';
-            } else {
-                alert(message);
-            }
-        }
-
-        function restoreInfoPanel() {
-            const infoPanel = document.getElementById('infoPanel');
-            if (infoPanel && window._originalPanelContent) {
-                infoPanel.innerHTML = window._originalPanelContent;
-                infoPanel.classList.remove('alert-warning');
-                infoPanel.classList.add('alert-light');
-            } else {
-                // fallback jika tidak tersimpan
-                location.reload(); 
-            }
-        }
-
-        // optional: menambahkan efek untuk link navigasi agar memberi notifikasi ringan 
-        // namun tetap mempertahankan fungsi asli (tidak mengganggu karena href asli menggunakan site_url)
-        // Ini hanya untuk keperluan demo saat dijalankan di environment tanpa backend PHP,
-        // tetapi untuk production, link akan mengarah ke controller yang sesuai.
-        // kita bisa override click hanya untuk memberikan extra info jika diperlukan (opsional)
-        // namun lebih baik tetap menjalankan default behavior agar integritas kode asli.
-        // Agar pengguna mengerti bahwa link mengarah ke endpoint PHP, kita tambahkan eventListener
-        // console.log saja. Tidak merusak navigasi.
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                // hanya untuk tujuan demo: menampilkan rute yang akan dituju di console, tidak mengganggu navigasi.
-                const href = link.getAttribute('href');
-                if (href && href.startsWith('<?php echo site_url')) {
-                    console.log(`[Navigasi SIG] Mengarah ke: ${href}`);
-                } else if (href) {
-                    console.log(`[Navigasi SIG] Mengarah ke: ${href}`);
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
                 }
-                // Tidak melakukan preventDefault sehingga link bekerja seperti yang diharapkan.
-                // Di environment asli (CodeIgniter / PHP framework), site_url akan dieksekusi.
-                // Untuk tampilan statis, jika tidak ada backend, browser akan mencoba mengakses path tersebut.
-                // Itu sesuai requirement.
             });
         });
-
-        // Inisialisasi tooltip atau placeholder info bahwa ini adalah template SIG responsif
-        console.log('SIG Bootstrap Navigation — siap pakai dengan routing PHP dinamis (site_url).');
-        
-        // menambahkan event pada search input enter juga
-        const searchForm = document.querySelector('form.d-flex');
-        if (searchForm) {
-            searchForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                handleSearch();
-            });
-        }
-
-        // tampilkan demo bahwa environment sudah siap tapi link asli terintegrasi dengan PHP
-        // membuat fungsi untuk menjelaskan bahwa site_url aktif di backend.
-        // agar tidak mengganggu user, kita tambahkan indikator elegan di console.
     </script>
-    <!-- Catatan: 
-         Semua tautan menggunakan <?php echo site_url(...); ?> yang merupakan helper bawaan CodeIgniter / framework PHP.
-         Jika halaman dijalankan dalam konteks server PHP, tautan akan mengarah ke controller yang sesuai.
-         Dalam preview statis, tautan tetap mempertahankan sintaks PHP yang akan di-proses oleh mesin PHP.
-         Struktur Bootstrap 5 navbar collapsible berfungsi sempurna dengan data-bs-toggle dan target yang tepat.
-         Tombol pencarian memberikan umpan balik interaktif tanpa reload berlebihan.
-         Desain modern, komponen ikon yang menarik, dan responsif di berbagai perangkat.
-    -->
+     <div>
+      <h2 class="text-2xl font-bold text-green-700 mb-4">
+       Lokasi Sekolah
+      </h2>
+      <div class="bg-white shadow-md rounded-lg p-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.4293078053556!2d111.8253141738045!3d-7.744204976770972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79ad1500000001%3A0xc29525c5c62f855d!2sMadrasah%20Ibtidaiyah%20Hidayatul%20Ulum!5e0!3m2!1sid!2sid!4v1737705179012!5m2!1sid!2sid" width="570" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+     </div>
+    </div>
+   </div>
+  </section>
 </body>
 </html>
