@@ -28,8 +28,7 @@
             background-color: #e0e0e0; /* Latar belakang saat hover */
         }
     </style>
-</head>
-</head>
+
 <body class="font-sans bg-gray-100">
     <!-- Header -->
     <div class="bg-white py-6 px-8 shadow-lg flex flex-col md:flex-row items-center justify-between">
