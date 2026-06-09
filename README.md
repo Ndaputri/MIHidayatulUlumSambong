@@ -1,4 +1,3 @@
-
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -70,7 +69,39 @@
 </head>
 <body class="bg-gradient-to-b from-green-50 to-gray-100">
 
-   
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img class="w-10 h-10 rounded-full bg-white p-1 shadow-sm object-contain" 
+                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
+                         alt="Logo">
+                    <span class="font-bold text-gray-800 text-sm md:text-base">MI Hidayatul Ulum</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-orange-500 transition">Beranda</a>
+                    <a href="#syarat" class="nav-link text-gray-600 hover:text-orange-500 transition">Syarat</a>
+                    <a href="#alur" class="nav-link text-gray-600 hover:text-orange-500 transition">Alur</a>
+                    <a href="#statistik" class="nav-link text-gray-600 hover:text-orange-500 transition">Statistik</a>
+                    <a href="#info" class="nav-link text-gray-600 hover:text-orange-500 transition">Info</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-3 pt-3 border-t border-gray-200">
+                <a href="#home" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Beranda</a>
+                <a href="#syarat" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Syarat</a>
+                <a href="#alur" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Alur</a>
+                <a href="#statistik" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Statistik</a>
+                <a href="#info" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Info</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Spacer untuk fixed navbar -->
     <div class="h-16"></div>
@@ -90,7 +121,7 @@
             <h3 class="text-gray-800 text-xl md:text-2xl font-bold mb-4">TAHUN AJARAN 2025 / 2026</h3>
             <p class="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto">Silahkan lengkapi formulir pendaftaran berikut untuk bergabung menjadi bagian dari keluarga besar MI Hidayatul Ulum.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#info/formulir" class="btn-primary bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 font-semibold shadow-lg">
+                <a href="/formulir" class="btn-primary bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 font-semibold shadow-lg">
                     <i class="fas fa-edit"></i>
                     <span>Daftar Sekarang</span>
                 </a>
@@ -160,7 +191,7 @@
                 <div class="space-y-5">
                     <div class="flex gap-4 p-3 rounded-xl hover:bg-green-50 transition">
                         <div class="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
-
+                        <div><h3 class="font-bold text-lg text-gray-800">Kunjungi Website</h3><p class="text-gray-600">Akses website PPDB Online MI Hidayatul Ulum</p></div>
                     </div>
                     <div class="flex gap-4 p-3 rounded-xl hover:bg-green-50 transition">
                         <div class="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
@@ -180,7 +211,7 @@
                 <div class="bg-green-100 rounded-2xl p-6 text-center">
                     <i class="fas fa-file-signature text-green-600 text-6xl mb-3"></i>
                     <p class="text-gray-700">Siap menjadi bagian dari<br>keluarga besar MI Hidayatul Ulum?</p>
-                    <a href="#info/formulir" class="inline-block bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition mt-3">
+                    <a href="/formulir" class="inline-block bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition mt-3">
                         Daftar Sekarang <i class="fas fa-arrow-right ml-1"></i>
                     </a>
                 </div>
