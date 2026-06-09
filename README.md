@@ -70,73 +70,7 @@
 </head>
 <body class="bg-gradient-to-b from-green-50 to-gray-100">
 
-    <!-- ==================== NAVBAR - LOGO KIRI, MENU KANAN ==================== -->
-    <nav class="bg-green-700 text-white fixed w-full top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <!-- Logo / Brand - Kiri -->
-                <a href="#home" class="flex items-center space-x-2 hover:opacity-90 transition">
-                    <img class="w-8 h-8 rounded-full bg-white p-1 object-contain" 
-                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                         alt="Logo">
-                    <h1 class="text-lg md:text-xl font-bold">PPDB Online</h1>
-                </a>
-                
-                <!-- Desktop Menu - Rata KANAN (tanpa ruang kosong) -->
-                <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
-                    <a href="#home" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
-                        <i class="fas fa-home"></i> Home
-                    </a>
-                    <a href="#syarat" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
-                        <i class="fas fa-check-circle"></i> Syarat
-                    </a>
-                    <a href="#alur" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
-                        <i class="fas fa-road"></i> Cara Daftar
-                    </a>
-                    <a href="#statistik" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
-                        <i class="fas fa-chart-bar"></i> Statistik
-                    </a>
-                    <a href="#info" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
-                        <i class="fas fa-info-circle"></i> Info
-                    </a>
-                    <a href="<?= base_url();?>home/formulir" class="bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full flex items-center gap-2 transition ml-2 shadow-md whitespace-nowrap">
-                        <i class="fas fa-file-alt"></i> Formulir
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Button (Hamburger) -->
-                <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none p-2 hover:bg-green-600 rounded-lg transition">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            
-            <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-green-600">
-                <div class="flex flex-col space-y-2">
-                    <a href="#home" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-home w-5 text-green-200"></i> Home
-                    </a>
-                    <a href="#syarat" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-check-circle w-5 text-green-200"></i> Syarat
-                    </a>
-                    <a href="#alur" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-road w-5 text-green-200"></i> Cara Daftar
-                    </a>
-                    <a href="#statistik" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-chart-bar w-5 text-green-200"></i> Statistik
-                    </a>
-                    <a href="#info" class="mobile-nav-link hover:bg-green-600 py-3 px-3 rounded-lg flex items-center gap-3 transition">
-                        <i class="fas fa-info-circle w-5 text-green-200"></i> Info
-                    </a>
-                    <div class="pt-2">
-                        <a href="<?= base_url();?>home/formulir" class="bg-orange-500 hover:bg-orange-600 text-center py-3 rounded-lg flex items-center justify-center gap-2 transition w-full">
-                            <i class="fas fa-file-alt"></i> Formulir Pendaftaran
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+   
 
     <!-- Spacer untuk fixed navbar -->
     <div class="h-16"></div>
