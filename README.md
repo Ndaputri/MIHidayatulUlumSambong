@@ -70,20 +70,20 @@
 </head>
 <body class="bg-gradient-to-b from-green-50 to-gray-100">
 
-    <!-- ==================== NAVBAR RATA TENGAH ==================== -->
+    <!-- ==================== NAVBAR - LOGO KIRI, MENU KANAN ==================== -->
     <nav class="bg-green-700 text-white fixed w-full top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <!-- Logo / Brand - Kiri -->
-                <div class="flex items-center space-x-2">
+                <a href="#home" class="flex items-center space-x-2 hover:opacity-90 transition">
                     <img class="w-8 h-8 rounded-full bg-white p-1 object-contain" 
                          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
                          alt="Logo">
                     <h1 class="text-lg md:text-xl font-bold">PPDB Online</h1>
-                </div>
+                </a>
                 
-                <!-- Desktop Menu - RATA TENGAH -->
-                <div class="hidden md:flex items-center space-x-1 lg:space-x-2 mx-auto">
+                <!-- Desktop Menu - Rata KANAN (tanpa ruang kosong) -->
+                <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
                     <a href="#home" class="nav-link px-3 py-2 rounded-lg transition whitespace-nowrap flex items-center gap-1">
                         <i class="fas fa-home"></i> Home
                     </a>
@@ -103,9 +103,6 @@
                         <i class="fas fa-file-alt"></i> Formulir
                     </a>
                 </div>
-                
-                <!-- Kosongkan di kanan agar menu tetap di tengah -->
-                <div class="hidden md:block w-24"></div>
                 
                 <!-- Mobile Menu Button (Hamburger) -->
                 <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none p-2 hover:bg-green-600 rounded-lg transition">
@@ -257,43 +254,6 @@
         </div>
     </section>
 
-    <!-- ==================== CARA DAFTAR ==================== -->
-    <section id="cara-daftar" class="container mx-auto py-12 md:py-16 px-4">
-        <div class="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl shadow-xl overflow-hidden">
-            <div class="p-6 md:p-10">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                    <i class="fas fa-question-circle"></i> Cara Mendaftar
-                </h2>
-                <div class="space-y-5 text-white">
-                    <div class="flex gap-4 items-start">
-                        <div class="bg-white text-green-700 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
-                        <p class="text-white/90">Klik tombol <span class="bg-orange-500 px-2 py-0.5 rounded text-sm">Daftar Sekarang</span> atau <span class="bg-orange-500 px-2 py-0.5 rounded text-sm">Formulir</span> di menu navigasi</p>
-                    </div>
-                    <div class="flex gap-4 items-start">
-                        <div class="bg-white text-green-700 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
-                        <p class="text-white/90">Isi formulir pendaftaran dengan data diri yang benar dan lengkap</p>
-                    </div>
-                    <div class="flex gap-4 items-start">
-                        <div class="bg-white text-green-700 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
-                        <p class="text-white/90">Upload dokumen persyaratan yang diperlukan (KK, Akta, Ijazah, dll)</p>
-                    </div>
-                    <div class="flex gap-4 items-start">
-                        <div class="bg-white text-green-700 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
-                        <p class="text-white/90">Kirimkan berkas fisik ke kantor MI Hidayatul Ulum atau melalui WhatsApp yang tersedia</p>
-                    </div>
-                </div>
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <a href="https://wa.me/6282245601782" target="_blank" class="bg-green-500 hover:bg-green-800 text-white px-5 py-2 rounded-full flex items-center gap-2 transition text-sm">
-                        <i class="fab fa-whatsapp"></i> WhatsApp MI Induk
-                    </a>
-                    <a href="https://wa.me/6285735117441" target="_blank" class="bg-green-500 hover:bg-green-800 text-white px-5 py-2 rounded-full flex items-center gap-2 transition text-sm">
-                        <i class="fab fa-whatsapp"></i> WhatsApp MI Cabang
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ==================== STATISTIK PENDAFTAR ==================== -->
     <section id="statistik" class="container mx-auto py-12 md:py-16 px-4">
         <div class="text-center mb-10">
@@ -349,7 +309,7 @@
     </section>
 
     <!-- ==================== FOOTER ==================== -->
-    <footer class="bg-green-700 text-white py-6 md:py-8">
+    <footer class="bg-green-700 text-white py-6 md:py-8 mt-4">
         <div class="container mx-auto px-4">
             <div class="flex flex-col items-center text-center">
                 <div class="flex items-center space-x-2 mb-4">
