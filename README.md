@@ -80,11 +80,13 @@
                     <span class="font-bold text-gray-800 text-sm md:text-base">MI Hidayatul Ulum</span>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="nav-link text-gray-600 hover:text-orange-500 transition">Beranda</a>
-                    <a href="#syarat" class="nav-link text-gray-600 hover:text-orange-500 transition">Syarat</a>
-                    <a href="#alur" class="nav-link text-gray-600 hover:text-orange-500 transition">Alur</a>
-                    <a href="#statistik" class="nav-link text-gray-600 hover:text-orange-500 transition">Statistik</a>
-                    <a href="#info" class="nav-link text-gray-600 hover:text-orange-500 transition">Info</a>
+                        <a href="#home" class="hover:text-orange-400 flex items-center"><i class="fas fa-home mr-1"></i> Home</a>
+                <a href="#syarat" class="hover:text-orange-400 flex items-center"><i class="fas fa-check-circle mr-1"></i> Syarat</a>
+                <a href="<?= base_url();?>home/formulir" class="hover:text-orange-400 flex items-center"><i class="fas fa-list-alt mr-1"></i> Formulir</a>
+                 <a href="#alur" class="hover:text-orange-400 flex items-center"><i class="fas fa-road mr-1"></i> Cara Daftar</a>
+                <a href="#statistik" class="hover:text-orange-400 flex items-center"><i class="fas fa-chart-bar mr-1"></i> Statistik</a>
+                <a href="#info" class="hover:text-orange-400 flex items-center"><i class="fas fa-info-circle mr-1"></i> Info</a>
+       
                 </div>
                 <div class="md:hidden">
                     <button id="menu-toggle" class="text-gray-600 focus:outline-none">
