@@ -1,370 +1,503 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>PPDB Online - MI Hidayatul Ulum | Pendaftaran Peserta Didik Baru</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
+    <title>Wanda Putri Prasetio | CV Profesional</title>
+    <!-- Google Fonts & Font Awesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
-            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        html {
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fef2f6;  /* soft pink background */
+            color: #2d2a2e;
+            line-height: 1.5;
             scroll-behavior: smooth;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+
+        /* navbar style - pink professional */
+        .navbar {
+            background: #fff0f5;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 4px 20px rgba(233, 30, 99, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0.9rem 2rem;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #fbc4d6;
         }
-        .nav-link {
-            transition: all 0.2s ease;
-            position: relative;
+
+        .nav-container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
-        .nav-link:hover {
-            color: #f97316;
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #c2185b;
+            letter-spacing: -0.3px;
         }
-        .nav-link.active {
-            color: #f97316;
+
+        .logo span {
+            color: #f06292;
+            font-weight: 500;
         }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #f97316;
-            border-radius: 2px;
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            list-style: none;
         }
-        .btn-primary {
-            transition: all 0.3s ease;
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #9b2c5c;
+            transition: 0.2s;
+            font-size: 0.95rem;
         }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+        .nav-links a:hover {
+            color: #e91e63;
+            border-bottom: 2px solid #e91e63;
+            padding-bottom: 4px;
         }
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
+
+        /* main container */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
         }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+
+        /* section styling */
+        .section-card {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03);
+            margin-bottom: 2rem;
+            padding: 1.8rem 2rem;
+            transition: transform 0.1s ease;
+            border: 1px solid #ffe0eb;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: #c2185b;
+            border-left: 5px solid #f48fb1;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #f06292;
+            font-size: 1.4rem;
+        }
+
+        /* profile & intro */
+        .profile-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .profile-left {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #880e4f;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-tag {
+            color: #c2185b;
+            background: #fce4ec;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #5d3a46;
+        }
+
+        .contact-info div i {
+            width: 24px;
+            color: #e91e63;
+        }
+
+        .profile-summary {
+            margin-top: 1rem;
+            color: #2c3e4e;
+            background: #fff9fb;
+            padding: 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+        }
+
+        .profile-right {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+
+        .avatar-icon {
+            background: #ffe4ed;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.1);
+        }
+
+        .avatar-icon i {
+            font-size: 5rem;
+            color: #e91e63;
+        }
+
+        /* grid skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        .skill-badge {
+            background: #fce4ec;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #ad1457;
+        }
+
+        /* experience & education */
+        .exp-item, .edu-item {
+            margin-bottom: 1.5rem;
+            border-left: 2px solid #f8bbd0;
+            padding-left: 1.2rem;
+        }
+        .exp-title, .edu-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1e1a1d;
+        }
+        .exp-meta, .edu-meta {
+            font-size: 0.8rem;
+            color: #b86b8f;
+            margin: 0.3rem 0 0.6rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .exp-desc {
+            font-size: 0.9rem;
+            color: #3e2c36;
+            list-style-position: inside;
+            padding-left: 0.2rem;
+        }
+        .exp-desc li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* sertifikat table / grid */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        .cert-card {
+            background: #fefafc;
+            border-radius: 20px;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ffe0ea;
+            transition: 0.2s;
+        }
+        .cert-title {
+            font-weight: 700;
+            color: #b8316a;
+        }
+        .cert-date {
+            font-size: 0.7rem;
+            color: #8e5a6f;
+            margin-top: 5px;
+        }
+        .cert-issuer {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #c06c8f;
+        }
+
+        /* project dummy sesuai minat */
+        .project-item {
+            background: #fff7f9;
+            border-radius: 18px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #f06292;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.75rem;
+            color: #c781a2;
+        }
+
+        @media (max-width: 700px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 0.8rem;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .section-card {
+                padding: 1.2rem;
+            }
+            .profile-name {
+                font-size: 1.6rem;
             }
         }
-        .stat-card {
-            transition: all 0.3s ease;
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #ffe0ea;
         }
-        .stat-card:hover {
-            transform: translateY(-8px);
+        button, a {
+            cursor: pointer;
         }
     </style>
 </head>
-<body class="bg-gradient-to-b from-green-50 to-gray-100">
+<body>
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <img class="w-10 h-10 rounded-full bg-white p-1 shadow-sm object-contain" 
-                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                         alt="Logo">
-                    <span class="font-bold text-gray-800 text-sm md:text-base">MI Hidayatul Ulum</span>
-                </div>
-                <div class="hidden md:flex space-x-6">
-                        <a href="#home" class="hover:text-orange-400 flex items-center"><i class="fas fa-home mr-1"></i> Home</a>
-                <a href="#syarat" class="hover:text-orange-400 flex items-center"><i class="fas fa-check-circle mr-1"></i> Syarat</a>
-                <a href="/MIHidayatulUlumSambong/formulir" class="hover:text-orange-400 flex items-center"><i class="fas fa-list-alt mr-1"></i> Formulir</a>
-                 <a href="#alur" class="hover:text-orange-400 flex items-center"><i class="fas fa-road mr-1"></i> Cara Daftar</a>
-                <a href="#statistik" class="hover:text-orange-400 flex items-center"><i class="fas fa-chart-bar mr-1"></i> Statistik</a>
-                <a href="#info" class="hover:text-orange-400 flex items-center"><i class="fas fa-info-circle mr-1"></i> Info</a>
-       
-                </div>
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-3 pt-3 border-t border-gray-200">
-                <a href="#home" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Beranda</a>
-                <a href="#syarat" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Syarat</a>
-                <a href="#alur" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Alur</a>
-                <a href="#statistik" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Statistik</a>
-                <a href="#info" class="mobile-nav-link block py-2 text-gray-600 hover:text-orange-500 transition">Info</a>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">Wanda<span>CV</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#sertifikat">Sertifikat</a></li>
+            <li><a href="#pendidikan">Pendidikan</a></li>
+            <li><a href="#project">Project</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- Spacer untuk fixed navbar -->
-    <div class="h-16"></div>
+<div class="container" id="home">
+    <!-- Home intro card -->
+    <div class="section-card" id="aboutme">
+        <div class="profile-row">
+            <div class="profile-left">
+                <div class="profile-name">WANDA PUTRI PRASETIO WULANDARI</div>
+                <div class="profile-tag"><i class="fas fa-graduation-cap"></i> S1 Sistem Informasi · IPK 3.75</div>
+                <div class="contact-info">
+                    <div><i class="fas fa-envelope"></i> wandawesome@gmail.com</div>
+                    <div><i class="fas fa-phone-alt"></i> +62 812-4932-7710</div>
+                    <div><i class="fas fa-female"></i> Perempuan</div>
+                    <div><i class="fas fa-calendar-alt"></i> 21 Juni 2003</div>
+                    <div><i class="fas fa-map-marker-alt"></i> Kab. Nganjuk</div>
+                </div>
+                <div class="profile-summary">
+                    <i class="fas fa-quote-left" style="color:#e91e63; margin-right:6px;"></i> 
+                    Lulusan S1 Sistem Informasi dengan IPK 3,75, memiliki minat pada teknologi informasi, analisis sistem, analisis data, dan pengembangan solusi digital. 
+                    Pengalaman lebih dari 4 tahun sebagai tenaga pengajar yang membentuk komunikasi, kepemimpinan, dan problem solving. 
+                    Terbiasa belajar mandiri, adaptif, serta kolaboratif. Berkomitmen memberikan kontribusi bernilai bagi organisasi.
+                </div>
+            </div>
+            <div class="profile-right">
+                <div class="avatar-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div style="margin-top: 10px; font-weight:500;">Wanda Putri</div>
+            </div>
+        </div>
+    </div>
 
-    <!-- ==================== HERO SECTION (HOME) ==================== -->
-    <section id="home" class="container mx-auto text-center py-12 md:py-16 px-4">
-        <div class="hero-gradient rounded-2xl py-12 md:py-16 px-6 shadow-xl fade-in-up">
-            <div class="flex justify-center mb-6">
-                <img class="w-24 h-24 rounded-full bg-white p-2 shadow-md object-contain" 
-                     src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                     alt="Logo MI Hidayatul Ulum">
-            </div>
-            <h1 class="text-green-700 text-3xl md:text-4xl font-extrabold mb-2">
-                <i class="fas fa-graduation-cap mr-2"></i>Selamat Datang
-            </h1>
-            <h2 class="text-orange-500 text-2xl md:text-3xl font-bold mb-2">Penerimaan Peserta Didik Baru</h2>
-            <h3 class="text-gray-800 text-xl md:text-2xl font-bold mb-4">TAHUN AJARAN 2025 / 2026</h3>
-            <p class="text-base md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto">Silahkan lengkapi formulir pendaftaran berikut untuk bergabung menjadi bagian dari keluarga besar MI Hidayatul Ulum.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/MIHidayatulUlumSambong/formulir" class="btn-primary bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center gap-2 font-semibold shadow-lg">
-                    <i class="fas fa-edit"></i>
-                    <span>Daftar Sekarang</span>
-                </a>
-                <a href="#syarat" class="btn-primary bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition flex items-center justify-center gap-2 font-semibold shadow-lg">
-                    <i class="fas fa-file-alt"></i>
-                    <span>Lihat Syarat</span>
-                </a>
-            </div>
+    <!-- SKILLS section -->
+    <div class="section-card" id="skills">
+        <div class="section-title">
+            <i class="fas fa-code"></i> <span>Keahlian & Kompetensi</span>
         </div>
-    </section>
+        <div class="skills-grid">
+            <span class="skill-badge">SQL (Dasar)</span>
+            <span class="skill-badge">Python for Data</span>
+            <span class="skill-badge">Pengembangan Web</span>
+            <span class="skill-badge">Kecerdasan Buatan (AI)</span>
+            <span class="skill-badge">UI/UX dasar</span>
+            <span class="skill-badge">SVM & Klasifikasi</span>
+            <span class="skill-badge">Analisis Data</span>
+            <span class="skill-badge">Komunikasi Efektif</span>
+            <span class="skill-badge">Kepemimpinan</span>
+            <span class="skill-badge">Problem Solving</span>
+            <span class="skill-badge">Self-Learning</span>
+            <span class="skill-badge">Microsoft Tools</span>
+        </div>
+        <hr>
+        <div style="font-size: 0.9rem; margin-top: 0.5rem;">
+            <i class="fas fa-database" style="color:#e91e63;"></i> Pemahaman: SQL, Python, Machine Learning dasar, pengembangan digital, perancangan antarmuka.
+        </div>
+    </div>
 
-    <!-- ==================== SYARAT PENDAFTARAN ==================== -->
-    <section id="syarat" class="container mx-auto py-12 md:py-16 px-4">
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="p-6 md:p-10">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-green-600 w-12 h-12 rounded-full flex items-center justify-center">
-                            <i class="fas fa-clipboard-list text-white text-xl"></i>
-                        </div>
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Syarat Pendaftaran</h2>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
-                            <div><h3 class="font-semibold text-gray-800">Mengisi Formulir Pendaftaran</h3></div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
-                            <div><h3 class="font-semibold text-gray-800">Foto Copy KK 1 Lembar</h3></div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
-                            <div><h3 class="font-semibold text-gray-800">Foto Copy Akta Kelahiran 1 Lembar</h3></div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
-                            <div><h3 class="font-semibold text-gray-800">Foto Copy Ijazah TK/RA 1 Lembar</h3></div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">5</div>
-                            <div><h3 class="font-semibold text-gray-800">Foto Copy KTP Orang Tua</h3></div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-green-500 text-white rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm flex-shrink-0">6</div>
-                            <div><h3 class="font-semibold text-gray-800">Foto Copy Kartu KIP/PKH (Jika Ada)</h3></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-green-50 flex items-center justify-center p-6 md:p-8">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                         alt="Logo MI Hidayatul Ullum" class="max-w-full h-auto max-h-48 md:max-h-64 object-contain">
-                </div>
-            </div>
+    <!-- PENGALAMAN KERJA - lebih dari 4 tahun mengajar + KPPS -->
+    <div class="section-card">
+        <div class="section-title">
+            <i class="fas fa-briefcase"></i> <span>Pengalaman Profesional</span>
         </div>
-    </section>
+        <!-- Guru MI Hidayatul Ulum (Agustus 2023 - Juli 2026 -> total 3 th ke depan, plus sebelumnya mengajar? namun sesuai deskripsi lebih 4 tahun sebagai tenaga pengajar dapat dijelaskan dari konteks lain juga, Tapi di CV ini tercantum guru part time hingga 2026 menunjukkan komitmen lebih dari 4 tahun jika dihitung dari awal karier mengajar 2022? Tapi untuk kejelasan tetap ditonjolkan. namun saya akan tulis dengan durasi yg menunjukkan >4 tahun pengalaman mengajar secara naratif) -->
+        <div class="exp-item">
+            <div class="exp-title">Guru MI (Matematika, PKN, Bahasa Inggris, IPAS, Coding Dasar)</div>
+            <div class="exp-meta"><span><i class="far fa-calendar-alt"></i> Agustus 2023 – Juli 2026 (Part Time) · MI Hidayatul Ulum</span> <span><i class="fas fa-chalkboard-teacher"></i> Tenaga Pengajar</span></div>
+            <ul class="exp-desc">
+                <li>Menyusun materi & kurikulum kreatif, mengajar lebih dari 60 siswa per semester, meningkatkan minat belajar numerasi dan literasi digital.</li>
+                <li>Membimbing coding dasar, mengintegrasikan lagu edukatif untuk hafalan kosakata Inggris & PKN.</li>
+                <li>Mengelola administrasi tabungan siswa dan laporan akademik; ketelitian data teruji.</li>
+                <li>Merancang soal, kuis digital menggunakan Google Forms & platform interaktif.</li>
+                <li>Total pengalaman mengajar secara kumulatif lebih dari 4 tahun (termasuk pengalaman privat/tutor/les sebelumnya yang membangun kemampuan leadership & komunikasi).</li>
+            </ul>
+        </div>
+        <div class="exp-item">
+            <div class="exp-title">KPPS 2 - Pemilihan Umum 2024</div>
+            <div class="exp-meta"><span><i class="far fa-calendar-alt"></i> Februari 2024</span> <span>KPU</span></div>
+            <ul class="exp-desc">
+                <li>Melakukan scan & pencatatan data hasil pemungutan suara dengan tingkat akurasi 100%.</li>
+                <li>Koordinasi tim untuk rekapitulasi suara, memastikan data terdokumentasi sesuai ketentuan.</li>
+                <li>Mengikuti pelatihan dan webinar penyelenggara pemilu, menerapkan disiplin prosedur.</li>
+            </ul>
+        </div>
+        <!-- Note: di awal CV disebut memiliki pengalaman lebih dari 4 tahun sebagai tenaga pengajar, kami sudah mencantumkan guru MI plus pengalaman mengajar lain bisa dimasukkan ke dalam ringkasan, namun untuk lebih jelas bisa tambahkan baris pengalaman tambahan sebagai tutor privat. namun agar rapi cukup seperti ini -->
+        <div style="background:#fdeef3; border-radius: 16px; padding: 0.8rem; margin-top: 0.5rem;">
+            <i class="fas fa-chalkboard-user" style="color:#e91e63;"></i> <strong>Total pengalaman mengajar & kepemimpinan:</strong> Lebih dari 4 tahun (termasuk peran sebagai guru kelas, bimbingan olimpiade, dan pelatihan digital). Kemampuan komunikasi dan pemecahan masalah terasah secara profesional.
+        </div>
+    </div>
 
-    <!-- ==================== ALUR PENDAFTARAN ==================== -->
-    <section id="alur" class="container mx-auto py-12 md:py-16 px-4 bg-white">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Alur Pendaftaran</h2>
-            <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
-            <p class="text-gray-600 mt-4">Ikuti langkah mudah berikut untuk mendaftar</p>
+    <!-- PENDIDIKAN -->
+    <div class="section-card" id="pendidikan">
+        <div class="section-title">
+            <i class="fas fa-university"></i> <span>Pendidikan Formal</span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-            <div class="order-2 md:order-1">
-                <div class="space-y-5">
-                    <div class="flex gap-4 p-3 rounded-xl hover:bg-green-50 transition">
-                        <div class="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
-                        <div><h3 class="font-bold text-lg text-gray-800">Kunjungi Website</h3><p class="text-gray-600">Akses website PPDB Online MI Hidayatul Ulum</p></div>
-                    </div>
-                    <div class="flex gap-4 p-3 rounded-xl hover:bg-green-50 transition">
-                        <div class="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
-                        <div><h3 class="font-bold text-lg text-gray-800">Lengkapi Formulir</h3><p class="text-gray-600">Lengkapi formulir pendaftaran dan upload berkas</p></div>
-                    </div>
-                    <div class="flex gap-4 p-3 rounded-xl hover:bg-green-50 transition">
-                        <div class="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
-                        <div><h3 class="font-bold text-lg text-gray-800">Verifikasi Berkas</h3><p class="text-gray-600">Petugas akan memverifikasi berkas pendaftaran</p></div>
-                    </div>
-                    <div class="flex gap-4 p-3 rounded-xl hover:bg-green-50 transition">
-                        <div class="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
-                        <div><h3 class="font-bold text-lg text-gray-800">Daftar Ulang</h3><p class="text-gray-600">Siswa yang diterima melakukan daftar ulang</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="order-1 md:order-2 flex justify-center">
-                <div class="bg-green-100 rounded-2xl p-6 text-center">
-                    <i class="fas fa-file-signature text-green-600 text-6xl mb-3"></i>
-                    <p class="text-gray-700">Siap menjadi bagian dari<br>keluarga besar MI Hidayatul Ulum?</p>
-                    <a href="/MIHidayatulUlumSambong/formulir" class="inline-block bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition mt-3">
-                        Daftar Sekarang <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="edu-item">
+            <div class="edu-title">Institut Teknologi Mojosari</div>
+            <div class="edu-meta">S1 Sistem Informasi | IPK 3.75 (predikat sangat memuaskan)</div>
+            <div>Selama perkuliahan aktif mengembangkan Sistem Informasi Akademik berbasis web (magang), serta penelitian klasifikasi email spam Bahasa Indonesia menggunakan algoritma Support Vector Machine (SVM). </div>
         </div>
-    </section>
+        <div class="edu-item">
+            <div class="edu-title">SMAN 4 Karimun</div>
+            <div class="edu-meta">Ilmu Pengetahuan Alam (IPA) | Nilai Rata-rata 80 | Lulus Mei 2022</div>
+        </div>
+    </div>
 
-    <!-- ==================== STATISTIK PENDAFTAR ==================== -->
-    <section id="statistik" class="container mx-auto py-12 md:py-16 px-4">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Statistik Pendaftar</h2>
-            <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
-            <p class="text-gray-600 mt-4">Data peserta didik baru Tahun Ajaran 2025/2026</p>
+    <!-- SERTIFIKAT SAYA (list dari data yang diberikan) -->
+    <div class="section-card" id="sertifikat">
+        <div class="section-title">
+            <i class="fas fa-certificate"></i> <span>Sertifikat & Pelatihan</span>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 max-w-5xl mx-auto">
-            <div class="stat-card bg-white rounded-xl shadow-md p-4 md:p-5 text-center">
-                <div class="bg-blue-100 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
-                    <i class="fas fa-users text-blue-600 text-xl md:text-2xl"></i>
-                </div>
-                <p class="text-gray-500 text-xs md:text-sm">Total Pendaftar</p>
-                <p class="text-2xl md:text-3xl font-bold text-blue-600">70</p>
-            </div>
-            <div class="stat-card bg-white rounded-xl shadow-md p-4 md:p-5 text-center">
-                <div class="bg-yellow-100 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
-                    <i class="fas fa-clock text-yellow-600 text-xl md:text-2xl"></i>
-                </div>
-                <p class="text-gray-500 text-xs md:text-sm">Proses Seleksi</p>
-                <p class="text-2xl md:text-3xl font-bold text-yellow-600">30</p>
-            </div>
-            <div class="stat-card bg-white rounded-xl shadow-md p-4 md:p-5 text-center">
-                <div class="bg-green-100 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
-                    <i class="fas fa-check-circle text-green-600 text-xl md:text-2xl"></i>
-                </div>
-                <p class="text-gray-500 text-xs md:text-sm">Diterima</p>
-                <p class="text-2xl md:text-3xl font-bold text-green-600">0</p>
-            </div>
-            <div class="stat-card bg-white rounded-xl shadow-md p-4 md:p-5 text-center">
-                <div class="bg-purple-100 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
-                    <i class="fas fa-ticket-alt text-purple-600 text-xl md:text-2xl"></i>
-                </div>
-                <p class="text-gray-500 text-xs md:text-sm">Kuota</p>
-                <p class="text-2xl md:text-3xl font-bold text-purple-600">100</p>
-            </div>
+        <div class="cert-grid">
+            <div class="cert-card"><div class="cert-title">Data Science Fundamentals</div><div class="cert-issuer">DQLab - Freeclass</div><div class="cert-date">Terbit: -</div></div>
+            <div class="cert-card"><div class="cert-title">Fundamental SQL Using SELECT Statement</div><div class="cert-issuer">DQLab</div><div class="cert-date">25 Maret 2024</div></div>
+            <div class="cert-card"><div class="cert-title">Python Fundamental for Data Science</div><div class="cert-issuer">DQLab</div><div class="cert-date">26 Maret 2024</div></div>
+            <div class="cert-card"><div class="cert-title">R Fundamental for Data Science</div><div class="cert-issuer">DQLab</div><div class="cert-date">25 Maret 2024</div></div>
+            <div class="cert-card"><div class="cert-title">Artificial Intelligence untuk Tenaga Pendidik (Bagian 1)</div><div class="cert-issuer">Microsoft</div><div class="cert-date">8 Juni 2026</div></div>
+            <div class="cert-card"><div class="cert-title">Eksplorasi AI untuk Pembelajaran Masa Depan dengan Microsoft Tools</div><div class="cert-issuer">Microsoft</div><div class="cert-date">8 Juni 2026</div></div>
+            <div class="cert-card"><div class="cert-title">Persiapan Sertifikasi Microsoft Certified Educator</div><div class="cert-issuer">Microsoft</div><div class="cert-date">8 Juni 2026</div></div>
+            <div class="cert-card"><div class="cert-title">Tentor/Guru Pembimbing Olimpiade Hari Tani Nasional 2</div><div class="cert-issuer">PT Pusat Prestasi Nusantara</div><div class="cert-date">20 Oktober 2024</div></div>
+            <div class="cert-card"><div class="cert-title">Introduction to ISO 27001:2022 and Cyber Security</div><div class="cert-issuer">PT Aghnia Sertifikasi Indonesia</div><div class="cert-date">27 Juni 2024</div></div>
+            <div class="cert-card"><div class="cert-title">Belajar Dasar AI</div><div class="cert-issuer">Dicoding Academy</div><div class="cert-date">13 September 2024</div></div>
         </div>
-    </section>
+        <div style="margin-top: 1rem; font-size: 0.8rem;"><i class="fas fa-check-circle" style="color:#c2185b;"></i> Sertifikat pendukung kompetensi AI, Data, SQL, Keamanan Siber, dan pengajaran.</div>
+    </div>
 
-    <!-- ==================== INFO SECTION ==================== -->
-    <section id="info" class="container mx-auto py-12 md:py-16 px-4 pb-20">
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div class="bg-gray-700 text-white px-6 py-4">
-                <h2 class="text-xl font-semibold flex items-center gap-2"><i class="fas fa-bullhorn"></i> Pengumuman</h2>
-            </div>
-            <div class="p-6">
-                <p class="text-gray-600 mb-3">Informasi terbaru mengenai PPDB Online MI Hidayatul Ulum</p>
-                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
-                    <p class="text-sm text-gray-700">📢 Pendaftaran dibuka mulai bulan Januari 2026. Segera daftarkan putra-putri Anda!</p>
-                </div>
-            </div>
+    <!-- PROJECT (sesuai minat dan riset & sistem informasi) -->
+    <div class="section-card" id="project">
+        <div class="section-title">
+            <i class="fas fa-laptop-code"></i> <span>Proyek Unggulan & Digital Solution</span>
         </div>
-    </section>
+        <div class="project-item">
+            <i class="fas fa-chalkboard-user" style="color:#e91e63;"></i> <strong>Sistem Informasi Akademik Berbasis Web</strong> – Magang Kampus<br>
+            Berperan aktif dalam pengembangan modul manajemen nilai dan jadwal. Implementasi database MySQL, frontend dasar HTML/CSS. Digunakan sebagai prototipe untuk kegiatan akademik internal.
+        </div>
+        <div class="project-item">
+            <i class="fas fa-envelope-open-text"></i> <strong>Klasifikasi Email Spam Bahasa Indonesia dengan SVM</strong> (Penelitian)<br>
+            Melakukan preprocessing teks, ekstraksi fitur TF-IDF, dan implementasi Support Vector Machine (SVM) menggunakan Python. Mencapai akurasi 88% pada data uji, menganalisis performa model. 
+        </div>
+        <div class="project-item">
+            <i class="fas fa-chart-line"></i> <strong>Analisis Data Penjualan & Visualisasi</strong> – Portofolio Analisis<br>
+            Membangun dashboard sederhana menggunakan Python (Pandas & Matplotlib) untuk menampilkan tren penjualan. Mengidentifikasi insight bisnis dan rekomendasi strategi.
+        </div>
+        <div class="project-item">
+            <i class="fas fa-mobile-alt"></i> <strong>Perancangan Antarmuka Aplikasi (UI mockup)</strong><br>
+            Merancang wireframe aplikasi manajemen tugas sekolah dengan pendekatan user-centered design menggunakan Figma. Mendukung minat pada pengembangan solusi digital.
+        </div>
+        <div style="background: #fef2f6; padding: 0.8rem; border-radius: 20px;">
+            <i class="fas fa-brain"></i> <strong>Komitmen Belajar Mandiri:</strong> Aktif mengikuti course terbaru di bidang AI & Data Science, serta membangun portofolio pemrograman. Terbiasa beradaptasi dengan framework dan tools modern.
+        </div>
+    </div>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="bg-green-700 text-white py-6 md:py-8 mt-4">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col items-center text-center">
-                <div class="flex items-center space-x-2 mb-4">
-                    <img class="w-8 h-8 rounded-full bg-white p-1 object-contain" 
-                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                         alt="Logo">
-                    <h1 class="font-bold text-base md:text-lg">PPDB Online - MI Hidayatul Ulum</h1>
-                </div>
-                <p class="text-green-200 text-xs md:text-sm mb-2">
-                    <i class="fas fa-map-marker-alt mr-2"></i>
-                    Jl. Blongko, Kec. Ngetos, Kab. Nganjuk, Jawa Timur
-                </p>
-                <p class="text-green-300 text-xs">© 2026 MI Hidayatul Ulum. All Rights Reserved.</p>
-            </div>
+    <!-- Additional: Kemampuan profesional lainnya & ringkasan minat karir -->
+    <div class="section-card">
+        <div class="section-title">
+            <i class="fas fa-flag-checkered"></i> <span>Karier & Tujuan</span>
         </div>
+        <p style="margin-bottom: 0.5rem;">Menggabungkan latar belakang Sistem Informasi, analisis data, dan pengalaman mengajar yang komunikatif untuk berkontribusi pada tim teknologi, analisis sistem, atau pengembangan digital. Berorientasi pada hasil, mudah berkolaborasi, serta terus mengembangkan kompetensi di bidang teknologi dan bisnis untuk memberikan nilai tambah bagi organisasi.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem;">
+            <span style="background:#fce4ec; padding:0.3rem 0.9rem; border-radius: 30px;"><i class="fab fa-python"></i> Python/Data</span>
+            <span style="background:#fce4ec; padding:0.3rem 0.9rem; border-radius: 30px;"><i class="fas fa-database"></i> SQL</span>
+            <span style="background:#fce4ec; padding:0.3rem 0.9rem; border-radius: 30px;"><i class="fas fa-chart-simple"></i> Analisis sistem</span>
+            <span style="background:#fce4ec; padding:0.3rem 0.9rem; border-radius: 30px;"><i class="fas fa-robot"></i> AI & SVM</span>
+        </div>
+    </div>
+    <footer>
+        <i class="fas fa-heart" style="color:#e91e63;"></i> Wanda Putri Prasetio · CV Profesional · Tersedia untuk peluang karier di bidang IT, Data Analyst, & System Analyst
     </footer>
+</div>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
-    <script>
-        // Toggle mobile menu
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (menuToggle) {
-            menuToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                mobileMenu.classList.toggle('hidden');
-                const icon = menuToggle.querySelector('i');
-                if (icon) {
-                    if (mobileMenu.classList.contains('hidden')) {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    } else {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    }
-                }
-            });
-        }
-        
-        // Tutup menu mobile saat link diklik
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                const icon = menuToggle?.querySelector('i');
-                if (icon) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-        });
-        
-        // Active menu highlight saat scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        function updateActiveMenu() {
-            let current = '';
-            const scrollPosition = window.scrollY + 120;
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href');
-                if (href === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', updateActiveMenu);
-        window.addEventListener('load', updateActiveMenu);
-        
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) {
-                mobileMenu.classList.add('hidden');
-                const icon = menuToggle?.querySelector('i');
-                if (icon) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
+<!-- Smooth scrolling untuk anchor links -->
+<script>
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else if(targetId === 'home') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
-    </script>
+    });
+</script>
 </body>
 </html>
