@@ -1,130 +1,205 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Formulir Pendaftaran - MI Hidayatul Ulum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Peserta Didik Baru</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { font-family: 'Inter', sans-serif; }
-        .form-card {
-            animation: fadeInUp 0.5s ease-out;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .btn-primary {
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        input:focus, select:focus, textarea:focus {
-            ring: 2px solid #f97316;
-            border-color: #f97316;
-        }
-    </style>
 </head>
-<body class="bg-gradient-to-b from-green-50 to-gray-100">
+<body class="bg-green-100">
+    <div class="container mx-auto mt-10">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="bg-green-500 text-white px-6 py-4 text-center">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
+                     alt="Logo MI Hidayatul Ulum" class="mx-auto w-24 mb-2">
+                <h2 class="text-lg font-semibold">FORMULIR PESERTA DIDIK BARU</h2>
+            </div>
+            <div class="p-6">
+                <form id="registrationForm">
+                    <h3 class="text-lg font-semibold mb-4">Data Pribadi Peserta Didik</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700">Nama Lengkap</label>
+                            <input type="text" id="nama" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                         <div>
+                            <label class="block text-gray-700">Nik</label>
+                            <input type="text" id="nik" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Tempat Lahir</label>
+                            <input type="text" id="tempat_lahir" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Tanggal Lahir</label>
+                            <input type="date" id="tanggal_lahir" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Jenis Kelamin</label>
+                            <select id="jenis_kelamin" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Agama</label>
+                            <input type="text" id="agama" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Kewarganegaraan</label>
+                            <input type="text" id="kewarganegaraan" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Moda Transportasi ke Sekolah</label>
+                            <input type="text" id="transportasi" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Anak ke Berapa dalam Keluarga</label>
+                            <input type="number" id="anak_ke" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Jumlah Saudara Kandung</label>
+                            <input type="number" id="jumlah_saudara" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                    </div>
 
-    <!-- Header dengan tombol kembali -->
-    <div class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3">
-                    <a href="/" class="text-orange-500 hover:text-orange-600 transition">
-                        <i class="fas fa-arrow-left text-xl"></i>
-                    </a>
-                    <img class="w-10 h-10 rounded-full bg-white p-1 shadow-sm object-contain" 
-                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                         alt="Logo">
-                    <span class="font-bold text-gray-800">Formulir PPDB Online</span>
-                </div>
-                <div class="text-sm text-gray-500">
-                    <i class="fas fa-calendar-alt mr-1"></i> TA 2025/2026
-                </div>
+                    <h3 class="text-lg font-semibold mt-6 mb-4">Data Sekolah Asal</h3>
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Nama Sekolah Sebelumnya</label>
+                        <input type="text" id="sekolah_asal" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700">NISN (Jika ada, jika belum isi 0)</label>
+                        <input type="text" id="nisn" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                    </div>
+
+                    <h3 class="text-lg font-semibold mt-6 mb-4">Data Orang Tua/Wali</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700">Nama Orang Tua/Wali</label>
+                            <input type="text" id="nama_ortu" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Pendidikan Terakhir</label>
+                            <input type="text" id="pendidikan_ortu" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Pekerjaan</label>
+                            <input type="text" id="pekerjaan_ortu" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Penghasilan Bulanan</label>
+                            <input type="text" id="penghasilan" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Alamat Ortu</label>
+                            <textarea id="alamat_ortu" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Nomor Telepon</label>
+                            <input type="text" id="nomor_telepon" class="w-full bg-green-600 text-white border-gray-300 rounded-md p-2" required>
+                        </div>
+                    </div>
+
+                   
+                    <div class="mb-4">
+                        <label for="alamat" class="block text-white-700">Alamat Lengkap</label>
+                        <textarea id="alamat" name="alamat" class="mt-1 block w-full bg-green-600  text-white border-gray-300 rounded-md p-2" required></textarea>
+                    </div>
+                    <button type="button" onclick="generatePDF()" class="bg-blue-700 text-white px-4 py-2 rounded-md">Download PDF</button>
+                </form>
             </div>
         </div>
     </div>
+    <!-- WhatsApp Button -->
+  <div class="fixed bottom-4 right-4">
+   <button class="bg-green-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center">
+     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                    </svg>
+    <a href="https://wa.me/6281249327710?text=Assalaamu'alaikum." class="text-white" target="_blank">
+                
+                                            <span class="d-none d-md-inline-block">KIRIM PDF KE SINI </span>
+                                    </a>
+    </i>
+   </button>
+    <script>
+    function generatePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+    // Header Sekolah
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(14);
+    doc.text("MADRASAH IBTIDAIYAH 'HIDAYATUL ULUM'", 50, 15);
+    doc.setFontSize(10);
+    doc.text("NSM: 111235180087 - NPSN: 60717631 - NPWP: 31.223.698.7-655.000", 50, 22);
+    doc.text("Dsn. Tengger, Ds. Blongko, Kec. Ngetos, Kab. Nganjuk (64474)", 50, 27);
+    doc.text("Telp/HP: 081357251463 - Email: hidayatululumtengger87@gmail.com", 50, 32);
+    doc.line(15, 35, 195, 35); // Garis bawah header
 
-    <div class="container mx-auto mt-6 mb-10 px-4">
-        <div class="form-card bg-white shadow-xl rounded-2xl overflow-hidden max-w-5xl mx-auto">
-            <!-- Header Form -->
-            <div class="bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-5 text-center">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1YyQtJSBc4S_vAvXQvCTY9g9WoHxLAumSJc5-6mXZEy2Z1F8KSJjb91fM67ubjJ5Lyb7fgeM_LSu76hhuYjQb7AYHcg6A6H4cxzVXPN29Fd3Zpa50dtAegesiqvWJNM-ivoQkSil1vvV3As5SOEMIc03w7QH8RPn7TyNGfefGPrah7IzRrGpWUvF3Gw8/s320/1730258986091.png" 
-                     alt="Logo MI Hidayatul Ulum" class="mx-auto w-20 mb-2 bg-white rounded-full p-1">
-                <h2 class="text-xl font-bold">FORMULIR PESERTA DIDIK BARU</h2>
-                <p class="text-green-100 text-sm">Isi data dengan lengkap dan benar</p>
-            </div>
-            
-            <div class="p-6 md:p-8">
-                <form id="registrationForm">
-                    <!-- Data Pribadi -->
-                    <div class="mb-8">
-                        <h3 class="text-lg font-semibold text-gray-800 border-l-4 border-orange-500 pl-3 mb-5">
-                            <i class="fas fa-user-graduate text-orange-500 mr-2"></i>Data Pribadi Peserta Didik
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">Nama Lengkap <span class="text-red-500">*</span></label>
-                                <input type="text" id="nama" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition" required>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">NIK <span class="text-red-500">*</span></label>
-                                <input type="text" id="nik" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition" required>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">Tempat Lahir <span class="text-red-500">*</span></label>
-                                <input type="text" id="tempat_lahir" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition" required>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">Tanggal Lahir <span class="text-red-500">*</span></label>
-                                <input type="date" id="tanggal_lahir" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition" required>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">Jenis Kelamin <span class="text-red-500">*</span></label>
-                                <select id="jenis_kelamin" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition" required>
-                                    <option value="Laki-laki">Laki-laki</option>
-                                    <option value="Perempuan">Perempuan</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">Agama <span class="text-red-500">*</span></label>
-                                <select id="agama" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition" required>
-                                    <option value="">Pilih Agama</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Kristen">Kristen</option>
-                                    <option value="Katolik">Katolik</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Buddha">Buddha</option>
-                                    <option value="Konghucu">Konghucu</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">Kewarganegaraan <span class="text-red-500">*</span></label>
-                                <input type="text" id="kewarganegaraan" value="Indonesia" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition" required>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">Moda Transportasi ke Sekolah</label>
-                                <select id="transportasi" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition">
-                                    <option value="Jalan Kaki">Jalan Kaki</option>
-                                    <option value="Sepeda">Sepeda</option>
-                                    <option value="Motor">Motor</option>
-                                    <option value="Mobil">Mobil</option>
-                                    <option value="Angkutan Umum">Angkutan Umum</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-medium mb-1">Anak ke Berapa dalam Keluarga</label>
-                                <input type="number" id="anak_ke" class="w-full bg-green-50 border border-green-200 rounded-lg p-2.5 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring
+    // Judul formulir
+    doc.setFont("times", "bold");
+    doc.setFontSize(14);
+    doc.text("FORMULIR PENDAFTARAN PESERTA DIDIK BARU", 50, 45)
+
+
+
+
+        // Ambil data dari form
+        let nama = document.getElementById("nama").value;
+         let nik = document.getElementById("nik").value;
+        let tempatLahir = document.getElementById("tempat_lahir").value;
+        let tanggalLahir = document.getElementById("tanggal_lahir").value;
+        let jenisKelamin = document.getElementById("jenis_kelamin").value;
+        let agama = document.getElementById("agama").value;
+        let kewarganegaraan = document.getElementById("kewarganegaraan").value;
+        let transportasi = document.getElementById("transportasi").value;
+        let anakKe = document.getElementById("anak_ke").value;
+        let jumlahSaudara = document.getElementById("jumlah_saudara").value;
+        let sekolahAsal = document.getElementById("sekolah_asal").value;
+        let nisn = document.getElementById("nisn").value;
+        let namaOrtu = document.getElementById("nama_ortu").value;
+        let pendidikanOrtu = document.getElementById("pendidikan_ortu").value;
+        let pekerjaanOrtu = document.getElementById("pekerjaan_ortu").value;
+        let penghasilan = document.getElementById("penghasilan").value;
+        let alamatOrtu = document.getElementById("alamat_ortu").value;
+        let nomorTelepon = document.getElementById("nomor_telepon").value;
+        let alamat = document.getElementById("alamat").value;
+
+        let content = `
+        Nama Lengkap: ${nama}
+        NIK: ${nik}
+        Tempat Lahir: ${tempatLahir}
+        Tanggal Lahir: ${tanggalLahir}
+        Jenis Kelamin: ${jenisKelamin}
+        Agama: ${agama}
+        Kewarganegaraan: ${kewarganegaraan}
+        Moda Transportasi ke Sekolah: ${transportasi}
+        Anak ke Berapa: ${anakKe}
+        Jumlah Saudara Kandung: ${jumlahSaudara}
+        
+        Nama Sekolah Asal: ${sekolahAsal}
+        NISN: ${nisn}
+
+        Nama Orang Tua/Wali: ${namaOrtu}
+        Pendidikan Terakhir: ${pendidikanOrtu}
+        Pekerjaan: ${pekerjaanOrtu}
+        Penghasilan Bulanan: ${penghasilan}
+        Alamat Orang Tua: ${alamatOrtu}
+        Nomor Telepon: ${nomorTelepon}
+
+        Alamat Lengkap: ${alamat}
+        `;
+
+        // Format isi agar lebih rapi dalam PDF
+    doc.setFont("times", "normal");
+    doc.setFontSize(12);
+    let lines = doc.splitTextToSize(content, 180); // Membatasi lebar teks agar tidak keluar halaman
+    doc.text(lines, 20, 55);
+
+    // Simpan PDF
+    doc.save("formulir_peserta_didik.pdf");
+}
+</script>
